@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace FKUnitySnippets.Movement.Rotation
+namespace FKUnitySnippets.Transformations
 {
     public class SpinningObject : MonoBehaviour
     {

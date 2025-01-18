@@ -13,13 +13,13 @@ namespace FKUnitySnippets.Text.TMPro
     public class ShakyText : MonoBehaviour
     {
         [SerializeField]
-        public float _angleMultiplier = 1.0f;
+        private float _angleMultiplier = 1.0f;
 
         [SerializeField]
-        public float _speedMultiplier = 1.0f;
+        private float _speedMultiplier = 1.0f;
 
         [SerializeField]
-        public float _curveScale = 1.0f;
+        private float _curveScale = 1.0f;
 
         private TMP_Text _textComponent;
 

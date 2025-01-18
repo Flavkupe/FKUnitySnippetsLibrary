@@ -2,7 +2,10 @@ using UnityEngine;
 
 namespace FKUnitySnippets.Transformations
 {
-    public class OscillatingObject : MonoBehaviour
+    /// <summary>
+    /// Note: You can remove the ICanReset if you just want the code snippet on its own.
+    /// </summary>
+    public class OscillatingObject : MonoBehaviour, ICanReset
     {
         private float _period = 0.0f;
 
@@ -16,6 +19,12 @@ namespace FKUnitySnippets.Transformations
         private Vector3 _axis = Vector3.up;
 
         private Vector3 _originalPos;
+
+        public void Reset()
+        {
+            this.transform.localPosition = _originalPos;
+            _period = 0.0f;
+        }
 
         void Start()
         {

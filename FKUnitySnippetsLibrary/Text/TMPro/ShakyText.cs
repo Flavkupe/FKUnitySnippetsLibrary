@@ -16,9 +16,6 @@ namespace FKUnitySnippets.Text.TMPro
         private float _angleMultiplier = 1.0f;
 
         [SerializeField]
-        private float _speedMultiplier = 1.0f;
-
-        [SerializeField]
         private float _curveScale = 1.0f;
 
         private TMP_Text _textComponent;

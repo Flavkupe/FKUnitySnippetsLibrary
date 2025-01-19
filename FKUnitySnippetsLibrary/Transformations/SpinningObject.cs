@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace FKUnitySnippets.Transformations
 {
-    public class SpinningObject : MonoBehaviour, ICanReset
+    public class SpinningObject : MonoBehaviour
     {
         [SerializeField]
         private float _rotationSpeed = 1f;
@@ -22,7 +22,7 @@ namespace FKUnitySnippets.Transformations
             transform.Rotate(_axis, _rotationSpeed * Time.deltaTime);
         }
 
-        public void Reset()
+        public void ResetState()
         {
             transform.rotation = _originalRotation;
         }

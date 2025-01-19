@@ -1,4 +1,3 @@
-using System.Security.Cryptography;
 using UnityEngine;
 
 namespace FKUnitySnippets.Curves.Bezier
@@ -56,7 +55,7 @@ namespace FKUnitySnippets.Curves.Bezier
 
         private void Update()
         {
-            // the temporary variable can allow _speed to change to negative to reverse the direction
+            // this allows _speed to change to negative to reverse the direction
             // after the destination is reached
             var t = _t + Time.deltaTime * _speed;
             if (t < 0.0f || t > 1.0f)

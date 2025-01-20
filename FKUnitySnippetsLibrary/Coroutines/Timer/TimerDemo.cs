@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace FKUnitySnippets.Coroutines.Timer
+namespace FKUnitySnippets.Coroutines
 {
     public class TimerDemo : MonoBehaviour
     {

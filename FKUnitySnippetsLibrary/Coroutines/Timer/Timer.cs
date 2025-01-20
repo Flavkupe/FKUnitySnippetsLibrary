@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-namespace FKUnitySnippets.Coroutines.Timer
+namespace FKUnitySnippets.Coroutines
 {
     public class Timer : MonoBehaviour
     {

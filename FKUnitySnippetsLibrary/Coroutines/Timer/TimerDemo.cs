@@ -68,5 +68,10 @@ namespace FKUnitySnippets.Coroutines
                 StopSpawningObjects();
             }
         }
+
+        void OnDestroy()
+        {
+            StopSpawningObjects();
+        }
     }
 }

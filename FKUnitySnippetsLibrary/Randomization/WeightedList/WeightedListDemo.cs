@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace FKUnitySnippets.Probability
+namespace FKUnitySnippets.Randomization
 {
     [Serializable]
     public class WeightedItem

@@ -1,8 +1,6 @@
 using System.Collections;
 using UnityEngine;
 
-// TODO: add this one
-
 namespace FKUnitySnippets.Coroutines
 {
     public class CoroutineRunner : MonoBehaviour

@@ -1,0 +1,2 @@
+### Shaky Text
+This is a simple modification of Unity's own VertexJitter script which comes with the TMPro Extensions & Examples package. This modification makes it a bit easier to use for this purpose.

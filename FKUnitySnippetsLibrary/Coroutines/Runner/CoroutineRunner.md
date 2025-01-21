@@ -3,7 +3,7 @@ If you're a fan of using Coroutines, the `CoroutineRunner` gives you a way to ru
 
 Here's an example:
 
-```csharp
+~~~csharp
 public static class MyUtilityClass
 {
 	public static void DoSomething()
@@ -17,4 +17,4 @@ public static class MyUtilityClass
 		Debug.Log("Coroutine finished!");
 	}
 }
-```
+~~~

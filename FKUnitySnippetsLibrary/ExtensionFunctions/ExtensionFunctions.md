@@ -5,11 +5,11 @@ The library `System.Linq` includes a bunch of very useful extension functions th
 
 If you aren't familiar with the usage of extension functions, here's an example of how you'd use `MoveX` on a Vector3 object (**NOTE: don't forget to include the namespace that the Extension Functions are in!):
 
-```csharp
+~~~csharp
 using UnityEngine;
 
 // IMPORTANT: Make sure to include the namespace of the Extension Functions!
-FKUnitySnippets.ExtensionFunctions;
+using FKUnitySnippets.ExtensionFunctions;
 
 public class Example : MonoBehaviour
 {
@@ -20,11 +20,11 @@ public class Example : MonoBehaviour
 		Debug.Log(position); // Output: (5, 2, 3)
 	}
 }
-```
+~~~
 
 You can always create your own Extension functions as well. Here's an example of how you'd create an Extension Function for the `Vector3` class:
 
-```csharp
+~~~csharp
 using UnityEngine;
 
 public static class MyVector3Extensions
@@ -35,4 +35,4 @@ public static class MyVector3Extensions
 		// do something with the vector
 	}
 }
-```
+~~~

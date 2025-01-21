@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace FKUnitySnippets.Curves.Bezier
+namespace FKUnitySnippets.Curves
 {
     public class Bezier
     {

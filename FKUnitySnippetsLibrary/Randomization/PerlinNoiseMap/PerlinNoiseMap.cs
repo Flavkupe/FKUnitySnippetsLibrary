@@ -1,6 +1,3 @@
-
-
-
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,18 +23,12 @@ namespace FKUnitySnippets.Randomization
 
             for (int x = 0; x < width; x++)
             {
-                var row = new List<string>();
-
                 for (int y = 0; y < height; y++)
                 {
                     float sampleX = (x + offsetX) / scale;
                     float sampleY = (y + offsetY) / scale;
                     map[x, y] = Mathf.PerlinNoise(sampleX, sampleY);
-
-                    row.Add(map[x, y].ToString());
                 }
-
-                Debug.Log(string.Join(" ", row));
             }
 
             return map;

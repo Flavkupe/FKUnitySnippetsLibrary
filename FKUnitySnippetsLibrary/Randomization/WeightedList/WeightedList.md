@@ -1,4 +1,4 @@
-### Wheighted List
+### Weighted List
 This is a simple data structure which creates a very basic probability distribution given multiple objects with different weights. In other words, you can use this to randomly pick items such that some items are picked more commonly than others.
 
 For example, if you have 3 items with these weights:

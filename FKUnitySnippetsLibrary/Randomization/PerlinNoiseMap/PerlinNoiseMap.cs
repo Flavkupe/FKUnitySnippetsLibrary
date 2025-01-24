@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace FKUnitySnippets.Randomization
@@ -7,17 +6,21 @@ namespace FKUnitySnippets.Randomization
     {
         public float[,] Map { get; private set; }
 
-        public PerlinNoiseMap(int width, int height, float scale = 1.0f, float offsetX = 0.0f, float offsetY = 0.0f)
+        public PerlinNoiseMap(int width, int height, float scale = 1.0f, float offsetX = 0.0f, float offsetY = 0.0f, int seed = 0)
         {
-            Map = GeneratePerlinMap(width, height, scale, offsetX, offsetY);
+            Map = GeneratePerlinMap(width, height, scale, offsetX, offsetY, seed);
         }
 
-        public static float[,] GeneratePerlinMap(int width, int height, float scale = 1.0f, float offsetX = 0.0f, float offsetY = 0.0f)
+        public static float[,] GeneratePerlinMap(int width, int height, float scale = 1.0f, float offsetX = 0.0f, float offsetY = 0.0f, int seed = 0)
         {
             if (scale <= 0)
             {
                 scale = 0.0001f;
             }
+
+            var seedOffset = GenerateSeedOffset(seed);
+            offsetX += seedOffset.x;
+            offsetY += seedOffset.y;
 
             float[,] map = new float[width, height];
 
@@ -32,6 +35,15 @@ namespace FKUnitySnippets.Randomization
             }
 
             return map;
+        }
+
+
+        private static Vector2 GenerateSeedOffset(int seed)
+        {
+            Random.InitState(seed);
+            float offsetX = Random.Range(-10000f, 10000f);
+            float offsetY = Random.Range(-10000f, 10000f);
+            return new Vector2(offsetX, offsetY);
         }
     }
 }

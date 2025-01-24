@@ -12,6 +12,10 @@ namespace FKUnitySnippets.Transformations
         [SerializeField]
         private float _magnitude = 1.0f;
 
+        [Tooltip("Whether to use cosine instead of sine.")]
+        [SerializeField]
+        private bool _useCos = false;
+
         [SerializeField]
         private Vector3 _axis = Vector3.up;
 
@@ -28,13 +32,12 @@ namespace FKUnitySnippets.Transformations
             _originalPos = this.transform.localPosition;
         }
 
-        // Update is called once per frame
         void Update()
         {
             _period = (_period + _speed * Time.deltaTime) % (2 * Mathf.PI);
-
-            var cos = Mathf.Abs(Mathf.Cos(_period) * _magnitude);
-            this.transform.localPosition = _originalPos + this._axis * cos;
+            var value  = _useCos ? Mathf.Cos(_period) : Mathf.Sin(_period);
+            value = Mathf.Abs(value * _magnitude);
+            this.transform.localPosition = _originalPos + this._axis * value;
         }
     }
 }

@@ -27,11 +27,24 @@ namespace FKUnitySnippets.Randomization
         [SerializeField]
         private float _threshold = 0.5f;
 
+        [SerializeField]
+        private float _seed = 0;
+
         private float[,] _map;
+
+        public void Start()
+        {
+            Generate();
+        }
+
+        public void ResetState()
+        {
+            Generate();
+        }
 
         public void Generate()
         {
-            _map = new PerlinNoiseMap(_mapWidth, _mapHeight, _scale, _offsetX, _offsetY).Map;
+            _map = new PerlinNoiseMap(_mapWidth, _mapHeight, _scale, _offsetX, _offsetY, (int)_seed).Map;
 
             if (_tiles != null)
             {

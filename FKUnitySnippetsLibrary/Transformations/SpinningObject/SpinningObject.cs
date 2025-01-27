@@ -26,5 +26,15 @@ namespace FKUnitySnippets.Transformations
         {
             transform.rotation = _originalRotation;
         }
+
+        public void SetRotationSpeed(float speed)
+        {
+            _rotationSpeed = speed;
+        }
+
+        public void SetRotationAxis(Vector3 axis)
+        {
+            _axis = axis;
+        }
     }
 }
